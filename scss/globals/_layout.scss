@@ -1,0 +1,18 @@
+.container-center{
+    max-width: 1111px;
+    margin-inline: auto;
+}
+.container-right{
+    max-width: 1360px;
+    margin-left: 12.5rem;
+}
+.container-left{
+    max-width: 1360px;
+    margin-right: 12.5rem;
+}
+.big_button_primary{
+    background-color: var(--blue);
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 1.7rem 3.2rem;
+}

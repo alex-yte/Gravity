@@ -1,0 +1,25 @@
+@forward 'globals';
+@use '../scss/globals/typography' as font;
+
+@mixin flexDirection($direction, $justyfy){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justyfy;
+}
+
+
+.header{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    .wrapper{
+        @include flexDirection(row, space-between);
+        width: 100%;
+    }
+}
+
+.hero{
+    &__heading{
+        font-family: font.$bold;
+    }
+}
+

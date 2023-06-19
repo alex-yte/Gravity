@@ -1,0 +1,39 @@
+:root{
+    font-size: 62.5%;
+}
+
+@font-face {
+	font-family: 'Fira Sans Regular';
+	src: url("assets/fonts/Fira Sans/FiraSans-Regular.ttf");
+}
+@font-face {
+	font-family: 'Fira Sans Medium';
+	src: url("assets/fonts/Fira Sans/FiraSans-Medium.ttf") format("ttf");
+}
+@font-face {
+	font-family: 'Fira Sans SemiBold';
+	src: url("assets/fonts/Fira Sans/FiraSans-SemiBold.ttf") format("ttf");
+}
+@font-face {
+	font-family: 'Fira Sans Bold';
+	src: url("assets/fonts/Fira Sans/FiraSans-Bold.ttf") format("ttf");
+}
+
+$regular: 'Fira Sans Regular', sans-serif;
+$medium: 'Fira Sans Medium', sans-serif;
+$semiBold: 'Fira Sans SemiBold', sans-serif;
+$bold: 'Fira Sans Bold', sans-serif;
+
+
+h1, h2, h3{
+    line-height: 1.1;
+    margin-top: 0;
+}
+p{
+    margin-top: 0;
+}
+a, 
+a:visited, 
+a:active{
+    text-decoration: none;
+}

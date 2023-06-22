@@ -1,6 +1,10 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -347,18 +351,21 @@ a:active {
 }
 
 .container-center {
-  max-width: 1111px;
+  max-width: 1360px;
+  padding-inline: 12.5rem;
   margin-inline: auto;
 }
 
 .container-right {
   max-width: 1360px;
-  margin-left: 12.5rem;
+  margin-inline: auto;
+  padding-left: 12.5rem;
 }
 
 .container-left {
   max-width: 1360px;
-  margin-right: 12.5rem;
+  margin-inline: auto;
+  padding-right: 12.5rem;
 }
 
 .big_button_primary {
@@ -366,11 +373,17 @@ a:active {
   color: var(--white);
   text-transform: uppercase;
   padding: 1.7rem 3.2rem;
+  font-family: "Fira Sans SemiBold", sans-serif;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  letter-spacing: 0.4rem;
 }
 
 :root {
   --blue: #3726F2;
-  --black: #000;
+  --black: #222;
   --grey: #c4c4c4;
   --sand: #C6B393;
   --white: #fff;
@@ -387,6 +400,44 @@ a:active {
   width: 100%;
 }
 
+.hero .container-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.hero__text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 19.5rem;
+  padding-top: 13rem;
+}
 .hero__heading {
   font-family: "Fira Sans Bold", sans-serif;
+  color: #151515;
+  font-size: 6rem;
+  line-height: 7rem;
+  letter-spacing: -0.1rem;
+}
+.hero__description {
+  color: var(--black, #223);
+  font-size: 1.8rem;
+  font-family: Fira Sans;
+  line-height: 2.8rem;
+  opacity: 0.6;
+}
+.hero__loaders_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.hero .loader {
+  height: 0.2rem;
+  width: 6.2em;
+  background: #C6B393;
+  opacity: 0.5;
+}
+.hero .loader.active {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

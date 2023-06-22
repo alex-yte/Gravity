@@ -1,18 +1,29 @@
+@use './typography' as font;
+
 .container-center{
-    max-width: 1111px;
+    max-width: 1360px;
+    padding-inline: 12.5rem;
     margin-inline: auto;
 }
 .container-right{
     max-width: 1360px;
-    margin-left: 12.5rem;
+    margin-inline: auto;
+    padding-left: 12.5rem;
 }
 .container-left{
     max-width: 1360px;
-    margin-right: 12.5rem;
+    margin-inline: auto;
+    padding-right: 12.5rem;
 }
 .big_button_primary{
     background-color: var(--blue);
     color: var(--white);
     text-transform: uppercase;
     padding: 1.7rem 3.2rem;
+    font-family: font.$semiBold;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    letter-spacing: 0.4rem;
 }

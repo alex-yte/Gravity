@@ -10,6 +10,7 @@
 .header{
     margin-top: 6rem;
     margin-bottom: 6rem;
+
     .wrapper{
         @include flexDirection(row, space-between);
         width: 100%;
@@ -17,7 +18,39 @@
 }
 
 .hero{
+    .container-right{
+        @include flexDirection(row, space-around);
+    }
+    &__text_container{
+        @include flexDirection(column, space-between);
+        padding-bottom: 19.5rem;
+        padding-top: 13rem;
+    }
     &__heading{
         font-family: font.$bold;
+        color: #151515;
+        font-size: 6rem;
+        line-height: 7rem;
+        letter-spacing: -0.1rem;
+    }
+    &__description{
+        color: var(--black, #223);
+        font-size: 1.8rem;
+        font-family: Fira Sans;
+        line-height: 2.8rem;
+        opacity: 0.6;
+    }
+    &__loaders_wrapper{
+        @include flexDirection(row,flex-start);
+        gap: .5rem;
+    }
+    .loader{
+        height: 0.2rem;
+        width: 6.2em;
+        background: #C6B393;
+        opacity: .5;
+    }
+    .loader.active{
+        opacity: 1;
     }
 }

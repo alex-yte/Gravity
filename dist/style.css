@@ -422,7 +422,7 @@ a:active {
 .hero__description {
   color: var(--black, #223);
   font-size: 1.8rem;
-  font-family: Fira Sans;
+  font-family: "Fira Sans Regular", sans-serif;
   line-height: 2.8rem;
   opacity: 0.6;
 }

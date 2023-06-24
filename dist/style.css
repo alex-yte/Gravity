@@ -402,6 +402,14 @@ a:active {
   --white: #fff;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
 .paragraph {
   color: var(--black, #223);
   font-family: "Fira Sans Regular", sans-serif;

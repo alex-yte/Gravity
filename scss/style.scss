@@ -6,7 +6,12 @@
     flex-direction: $direction;
     justify-content: $justyfy;
 }
-
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: black;
+}
 .paragraph{
     color: var(--black, #223);
     font-family: font.$regular;

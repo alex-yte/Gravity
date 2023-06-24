@@ -335,9 +335,22 @@ template {
   font-family: "Fira Sans Bold";
   src: url("assets/fonts/Fira Sans/FiraSans-Bold.ttf") format("ttf");
 }
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
   line-height: 1.1;
+  font-family: "Fira Sans SemiBold", sans-serif;
   margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 5rem;
+  letter-spacing: -0.1rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
 }
 
 p {
@@ -389,6 +402,12 @@ a:active {
   --white: #fff;
 }
 
+.paragraph {
+  color: var(--black, #223);
+  font-family: "Fira Sans Regular", sans-serif;
+  opacity: 0.6;
+}
+
 .header {
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -420,11 +439,8 @@ a:active {
   letter-spacing: -0.1rem;
 }
 .hero__description {
-  color: var(--black, #223);
   font-size: 1.8rem;
-  font-family: "Fira Sans Regular", sans-serif;
   line-height: 2.8rem;
-  opacity: 0.6;
 }
 .hero__loaders_wrapper {
   display: flex;
@@ -440,4 +456,55 @@ a:active {
 }
 .hero .loader.active {
   opacity: 1;
+}
+
+.about {
+  margin-top: 14rem;
+  margin-bottom: 14rem;
+}
+.about .container-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12.5rem;
+}
+.about__text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 6rem;
+}
+.about__text_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 3rem;
+}
+.about__description {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+.about__user_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 3rem;
+}
+.about__user_profile_picture {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 6.5rem;
+  background: url("../assets/img/Denis_Shepovalov.jpg"), lightgray 50%/cover no-repeat;
+}
+.about__user_profile_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.about .user_position {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
 }/*# sourceMappingURL=style.css.map */

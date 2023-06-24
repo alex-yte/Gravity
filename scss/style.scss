@@ -7,6 +7,12 @@
     justify-content: $justyfy;
 }
 
+.paragraph{
+    color: var(--black, #223);
+    font-family: font.$regular;
+    opacity: 0.6;
+}
+
 .header{
     margin-top: 6rem;
     margin-bottom: 6rem;
@@ -34,11 +40,8 @@
         letter-spacing: -0.1rem;
     }
     &__description{
-        color: var(--black, #223);
         font-size: 1.8rem;
-        font-family: font.$regular;
         line-height: 2.8rem;
-        opacity: 0.6;
     }
     &__loaders_wrapper{
         @include flexDirection(row,flex-start);
@@ -52,5 +55,49 @@
     }
     .loader.active{
         opacity: 1;
+    }
+}
+
+.about{
+    margin-top: 14rem;
+    margin-bottom: 14rem;
+    .container-center{
+        @include flexDirection(row, center);
+        align-items: center;
+        gap: 12.5rem;
+    }
+    &__text_container{
+        @include flexDirection(column, left);
+        gap: 6rem;
+    }
+    &__text_wrapper{
+        @include flexDirection(column, left);
+        gap: 3rem;
+    }
+    &__description{
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+    &__user_wrapper{
+        @include flexDirection(row, left);
+        gap: 3rem;
+    }
+    &__user_profile_picture{
+        width: 6.5rem;
+        height: 6.5rem;
+        border-radius: 6.5rem;
+        background: url('../assets/img/Denis_Shepovalov.jpg'), lightgray 50% / cover no-repeat;
+
+    }
+    &__user_profile_description{
+        @include flexDirection(column, center);
+        align-items: flex-start;
+        gap: .5rem;
+    }
+    .user{
+        &_position{
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+        }
     }
 }

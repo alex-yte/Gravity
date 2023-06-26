@@ -29,6 +29,7 @@
 }
 
 .hero{
+    margin-top: 0;
     .container-right{
         @include flexDirection(row, space-around);
     }
@@ -105,4 +106,93 @@
             line-height: 2.8rem;
         }
     }
+}
+
+.services{
+    margin-top: 14rem;
+    margin-bottom: 18rem;
+    &__heading{
+        font-size: 1.4rem;
+        line-height: 2.4;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+    }
+    &__text_wrapper{
+        margin-top: 4rem;
+        margin-bottom: 10rem;
+        @include flexDirection(row, space-between);
+        gap: 16rem;
+    }
+    &__description{
+        width: 50%;
+    }
+    &__buttons_wrapper{
+        @include flexDirection(row, space-between);
+        flex-wrap: wrap;
+        column-gap: 6rem;
+        row-gap: 2rem;
+        width: 50%;
+        p{
+            width: 40%;
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+            cursor: pointer;
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+    }
+}
+.slider{
+    &__img_wrapper {
+        display: flex;
+        overflow: scroll;
+        gap: 3rem;
+    }
+    &__img_wrapper::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+      
+    &__img_wrapper::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+      
+    &__img_wrapper:hover::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    &__btn_wrapper{
+        margin-top: 5rem;
+        @include flexDirection(row, flex-start);
+        column-gap: 2.5rem;
+        button{
+            padding: 0;
+            &:hover{
+                rect{
+                    fill: #979797;
+                }
+            }
+        }
+    }
+}
+
+.features{
+
+}
+
+.works{
+
+}
+
+.testimonials{
+
+}
+
+.clients{
+
+}
+
+footer{
+    
 }

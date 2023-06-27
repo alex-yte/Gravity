@@ -178,7 +178,62 @@
 }
 
 .features{
-
+    margin-top: 18.1rem;
+    margin-bottom: 20.2rem;
+    .container-left{
+        @include flexDirection(row,space-between);
+        gap: 9.7rem;
+    }
+    &__heading{
+        margin-top: 3.8rem;
+        margin-bottom: 3.8rem;
+        font-size: 4rem;
+        line-height: 5rem;
+        letter-spacing: -0.1rem;
+    }
+    &__description{
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        margin-bottom: 6.2rem;
+    }
+    &__img_container{
+        img{
+            width: 100%;
+        }
+        position: relative;
+        .back{
+            width: 100%;
+        }
+        .front{
+            position: absolute;
+            left: 30%;
+            bottom: 0;
+            height: 45rem;
+            object-fit: cover;
+            width: 35rem;
+          }
+        }
+    
+    &__text_container {
+        width: 65%;
+    }
+    .advantage1,
+    .advantage2{
+        @include flexDirection(row,flex-start);
+        gap: 3rem;
+        align-items: center;
+    }
+    .advantage__description{
+        p{
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+            letter-spacing: 0.4rem;
+            text-transform: uppercase;
+            opacity: 1;
+            font-family: font.$semiBold;
+            font-weight: 510;
+        }
+    }
 }
 
 .works{

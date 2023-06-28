@@ -650,4 +650,9 @@ a:active {
   opacity: 1;
   font-family: "Fira Sans SemiBold", sans-serif;
   font-weight: 510;
+}
+
+.works {
+  margin-top: 20rem;
+  margin-bottom: 25rem;
 }/*# sourceMappingURL=style.css.map */

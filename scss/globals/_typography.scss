@@ -5,18 +5,22 @@
 @font-face {
 	font-family: 'Fira Sans Regular';
 	src: url("assets/fonts/Fira Sans/FiraSans-Regular.ttf");
+	font-weight: 400;
 }
 @font-face {
 	font-family: 'Fira Sans Medium';
 	src: url("assets/fonts/Fira Sans/FiraSans-Medium.ttf") format("ttf");
+	font-weight: 500;
 }
 @font-face {
 	font-family: 'Fira Sans SemiBold';
 	src: url("assets/fonts/Fira Sans/FiraSans-SemiBold.ttf") format("ttf");
+	font-weight: 600;
 }
 @font-face {
 	font-family: 'Fira Sans Bold';
 	src: url("assets/fonts/Fira Sans/FiraSans-Bold.ttf") format("ttf");
+	font-weight: 700;
 }
 
 $regular: 'Fira Sans Regular', sans-serif;

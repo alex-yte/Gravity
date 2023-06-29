@@ -14,8 +14,9 @@
 }
 .paragraph{
     color: var(--black, #223);
-    font-family: font.$regular;
+    font-family: font.$medium;
     opacity: 0.6;
+    font-weight: 500;
 }
 
 .header{
@@ -239,6 +240,55 @@
 .works{
     margin-top: 20rem;
     margin-bottom: 25rem;
+
+    .section_heading{
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+    }
+    &__heading_wrapper{
+        @include flexDirection(row, space-between);
+        margin-top: 4rem;
+        margin-bottom: 10.8rem;
+    }
+    &__buttons_wrapper{
+        @include flexDirection(row, space-between);
+        gap: 2.4rem;
+        align-items: center;
+        
+        p{
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+            letter-spacing: 0.4rem;
+            &:hover{
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+    }
+    &__works_wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+
+        div:hover{
+            position: relative;
+            bottom: 2rem;
+            box-shadow: -30px 80px 200px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+    &__disclaimer_wrapper{
+        @include flexDirection(row,space-between);
+        align-items: center;
+        margin-top: 5.2rem;
+        p{
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 2.8rem;
+            width: 65%;
+        }
+    }
 }
 
 .testimonials{

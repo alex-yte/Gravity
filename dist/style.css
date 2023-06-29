@@ -322,18 +322,22 @@ template {
 @font-face {
   font-family: "Fira Sans Regular";
   src: url("assets/fonts/Fira Sans/FiraSans-Regular.ttf");
+  font-weight: 400;
 }
 @font-face {
   font-family: "Fira Sans Medium";
   src: url("assets/fonts/Fira Sans/FiraSans-Medium.ttf") format("ttf");
+  font-weight: 500;
 }
 @font-face {
   font-family: "Fira Sans SemiBold";
   src: url("assets/fonts/Fira Sans/FiraSans-SemiBold.ttf") format("ttf");
+  font-weight: 600;
 }
 @font-face {
   font-family: "Fira Sans Bold";
   src: url("assets/fonts/Fira Sans/FiraSans-Bold.ttf") format("ttf");
+  font-weight: 700;
 }
 h1, h2, h3, h4, h5 {
   line-height: 1.1;
@@ -412,8 +416,9 @@ a:active {
 
 .paragraph {
   color: var(--black, #223);
-  font-family: "Fira Sans Regular", sans-serif;
+  font-family: "Fira Sans Medium", sans-serif;
   opacity: 0.6;
+  font-weight: 500;
 }
 
 .header {
@@ -655,4 +660,56 @@ a:active {
 .works {
   margin-top: 20rem;
   margin-bottom: 25rem;
+}
+.works .section_heading {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+.works__heading_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4rem;
+  margin-bottom: 10.8rem;
+}
+.works__buttons_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2.4rem;
+  align-items: center;
+}
+.works__buttons_wrapper p {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.4rem;
+}
+.works__buttons_wrapper p:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.works__works_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+.works__works_wrapper div:hover {
+  position: relative;
+  bottom: 2rem;
+  box-shadow: -30px 80px 200px 0px rgba(0, 0, 0, 0.25);
+}
+.works__disclaimer_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5.2rem;
+}
+.works__disclaimer_wrapper p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  width: 65%;
 }/*# sourceMappingURL=style.css.map */

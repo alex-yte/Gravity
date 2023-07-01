@@ -416,9 +416,13 @@ a:active {
 
 .paragraph {
   color: var(--black, #223);
-  font-family: "Fira Sans Medium", sans-serif;
+  font-family: "Fira Sans Regular", sans-serif;
   opacity: 0.6;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+.section_heading {
+  font-weight: 501;
 }
 
 .header {
@@ -529,7 +533,7 @@ a:active {
   margin-top: 14rem;
   margin-bottom: 18rem;
 }
-.services__heading {
+.services .section_heading {
   font-size: 1.4rem;
   line-height: 2.4;
   letter-spacing: 0.4rem;
@@ -712,4 +716,46 @@ a:active {
   font-weight: 400;
   line-height: 2.8rem;
   width: 65%;
+}
+
+.testimonials {
+  margin-top: 25rem;
+  margin-bottom: 17rem;
+}
+.testimonials__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.testimonials__wrapper .section_heading {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+.testimonials__img_wrapper {
+  grid-column: 2;
+  grid-row: 1/span 2;
+}
+.testimonials__img_wrapper img {
+  max-width: 100%;
+}
+.testimonials__text_wrapper {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testimonials__user_profile_description {
+  margin-top: 12rem;
+  margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.3rem;
+}
+.testimonials__user_profile_description .user_position {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
 }/*# sourceMappingURL=style.css.map */

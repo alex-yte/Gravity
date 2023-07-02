@@ -387,8 +387,12 @@ body{
         justify-content: space-between;
         align-items: center;
 
+        svg g{
+            transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
         svg:hover g{
             opacity: 1;
+            transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
     }
 

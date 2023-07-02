@@ -806,8 +806,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.clients__logo_wrapper svg g {
+  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 .clients__logo_wrapper svg:hover g {
   opacity: 1;
+  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .footer {

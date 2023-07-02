@@ -406,6 +406,10 @@ a:active {
   --white: #fff;
 }
 
+body {
+  background-color: #f4f4f4;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -758,4 +762,61 @@ a:active {
 .testimonials__user_profile_description .user_position {
   font-size: 1.8rem;
   line-height: 2.8rem;
+}
+
+.clients {
+  background-color: #fafafa;
+  padding-top: 10rem;
+  padding-bottom: 14rem;
+}
+.clients__text_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+.clients__text_wrapper .section_heading {
+  grid-column: 2;
+  grid-row: 1;
+  font-family: "Fira Sans Medium", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 501;
+  line-height: 2.4rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.clients__heading {
+  grid-column: 1;
+  grid-row: 1;
+}
+.clients__description {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  opacity: 0.7;
+}
+.clients__logo_wrapper {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.clients__logo_wrapper svg:hover g {
+  opacity: 1;
+}
+
+.footer {
+  background-color: #515151;
+}
+.footer__logo {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }/*# sourceMappingURL=style.css.map */

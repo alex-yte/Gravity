@@ -372,7 +372,7 @@ a:active {
   padding-inline: 12.5rem;
   margin-inline: auto;
 }
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .container-center {
     max-width: 90%;
   }
@@ -383,7 +383,7 @@ a:active {
   margin-inline: auto;
   padding-left: 12.5rem;
 }
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .container-right {
     max-width: 90%;
   }
@@ -394,7 +394,7 @@ a:active {
   margin-inline: auto;
   padding-right: 12.5rem;
 }
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .container-left {
     max-width: 90%;
   }
@@ -444,8 +444,10 @@ body {
   font-weight: 501;
 }
 
-img {
-  width: 100%;
+@media (max-width: 1200px) {
+  img {
+    width: 100%;
+  }
 }
 
 .header {
@@ -467,7 +469,7 @@ img {
   flex-direction: row;
   justify-content: space-around;
 }
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .hero .container-right {
     gap: 2rem;
   }
@@ -479,7 +481,7 @@ img {
   padding-bottom: 19.5rem;
   padding-top: 13rem;
 }
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .hero__text_container {
     width: 70%;
   }

@@ -26,7 +26,10 @@ body{
     font-weight: 501;
 }
 img{
-    width: 100%;
+    @include mediaQuery.xl{
+        width: 100%;
+    }
+    
 }
 
 .header{

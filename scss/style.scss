@@ -1,5 +1,6 @@
 @forward 'globals';
 @use '../scss/globals/typography' as font;
+@use '../scss/globals/mediaQ' as mediaQuery;
 
 @mixin flexDirection($direction, $justyfy){
     display: flex;
@@ -24,6 +25,9 @@ body{
 .section_heading{
     font-weight: 501;
 }
+img{
+    width: 100%;
+}
 
 .header{
     margin-top: 6rem;
@@ -39,11 +43,18 @@ body{
     margin-top: 0;
     .container-right{
         @include flexDirection(row, space-around);
+        @include mediaQuery.xl{
+            gap: 2rem;
+        }
     }
     &__text_container{
         @include flexDirection(column, space-between);
         padding-bottom: 19.5rem;
         padding-top: 13rem;
+        @include mediaQuery.xl{
+            width: 70%;
+        }
+        
     }
     &__heading{
         font-family: font.$bold;
@@ -387,12 +398,14 @@ body{
         justify-content: space-between;
         align-items: center;
 
-        svg g{
-            transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-        svg:hover g{
-            opacity: 1;
-            transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+        svg {
+            g{
+                transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            &:hover g{
+                opacity: 1;
+                transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
         }
     }
 
@@ -406,5 +419,15 @@ body{
         margin-inline: auto;
         padding-top: 10rem;
         padding-bottom: 10rem;
+
+        svg {
+            path{
+                transition: fill .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            &:hover path{
+                fill: #000;
+                transition: fill .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+        }
     }
 }

@@ -92,14 +92,22 @@ img{
         @include flexDirection(row, center);
         align-items: center;
         gap: 12.5rem;
+        
+        @include mediaQuery.xl{
+            gap: 5rem
+        }
     }
     &__text_container{
         @include flexDirection(column, left);
         gap: 6rem;
+        @include mediaQuery.xl{
+            width: 50%;
+        }
     }
     &__text_wrapper{
         @include flexDirection(column, left);
         gap: 3rem;
+        
     }
     &__description{
         font-size: 1.8rem;
@@ -132,22 +140,29 @@ img{
 .services{
     margin-top: 14rem;
     margin-bottom: 18rem;
-    // .container-center{
-        .section_heading{
-            font-size: 1.4rem;
-            line-height: 2.4;
-            letter-spacing: 0.4rem;
-            text-transform: uppercase;
-        }
-    // }
+    .section_heading{
+        font-size: 1.4rem;
+        line-height: 2.4;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+    }
     &__text_wrapper{
         margin-top: 4rem;
         margin-bottom: 10rem;
         @include flexDirection(row, space-between);
         gap: 16rem;
+        @include mediaQuery.xl{
+            margin-bottom: 4rem;
+            @include flexDirection(column, space-between);
+            align-items: center;
+            gap: 2rem;
+        }
     }
     &__description{
         width: 50%;
+        @include mediaQuery.xl{
+            width: 100%;
+        }
     }
     &__buttons_wrapper{
         @include flexDirection(row, space-between);
@@ -160,9 +175,18 @@ img{
             font-size: 1.8rem;
             line-height: 2.8rem;
             cursor: pointer;
+
             &:hover{
                 opacity: 1;
             }
+            @include mediaQuery.xl{
+                width: fit-content;
+            }
+        }
+        @include mediaQuery.xl{
+            width: 100%;
+            justify-content: flex-end;
+            gap: 2rem;
         }
 
     }
@@ -172,6 +196,9 @@ img{
         display: flex;
         overflow: scroll;
         gap: 3rem;
+        @include mediaQuery.xl{
+            height: 40vh;
+        }
     }
     &__img_wrapper::-webkit-scrollbar {
         width: 6px;

@@ -377,6 +377,10 @@ img{
         margin-bottom: 8rem;
         @include flexDirection(column,space-between );
         gap: 1.3rem;
+        @include mediaQuery.xl{
+            margin-top: 4rem;
+            margin-bottom: 1rem;
+        }
 
         .user_position{
             font-size: 1.8rem;

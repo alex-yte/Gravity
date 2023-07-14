@@ -28,6 +28,7 @@ body{
 img{
     @include mediaQuery.xl{
         width: 100%;
+        height: 100%;
     }
     
 }
@@ -46,16 +47,24 @@ img{
     margin-top: 0;
     .container-right{
         @include flexDirection(row, space-around);
-        @include mediaQuery.xl{
+        @include mediaQuery.lg{
             gap: 2rem;
+            @include flexDirection(column-reverse, center );
         }
     }
     &__text_container{
         @include flexDirection(column, space-between);
         padding-bottom: 19.5rem;
         padding-top: 13rem;
-        @include mediaQuery.xl{
-            width: 70%;
+        @include mediaQuery.lg{
+            width: 85%;
+            padding-bottom: 10rem;
+            padding-top: 5rem;
+        }
+        @include mediaQuery.md{
+            width: 90%;
+            padding-bottom: 5rem;
+            padding-top: 4rem;
         }
         
     }
@@ -69,6 +78,11 @@ img{
     &__description{
         font-size: 1.8rem;
         line-height: 2.8rem;
+    }
+    &__img_container{
+        @include mediaQuery.lg{
+            height: 40vh;
+        }
     }
     &__loaders_wrapper{
         @include flexDirection(row,flex-start);
@@ -88,20 +102,31 @@ img{
 .about{
     margin-top: 14rem;
     margin-bottom: 14rem;
+    @include mediaQuery.sm{
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
     .container-center{
         @include flexDirection(row, center);
         align-items: center;
         gap: 12.5rem;
         
         @include mediaQuery.xl{
-            gap: 5rem
+            gap: 5rem;
+            @include flexDirection(column, center);
+        }
+    }
+    &__img_container{
+        @include mediaQuery.xl{
+            height: 40vh;
+            width: 90vw;
         }
     }
     &__text_container{
         @include flexDirection(column, left);
         gap: 6rem;
         @include mediaQuery.xl{
-            width: 50%;
+            width: 100%;
         }
     }
     &__text_wrapper{
@@ -140,6 +165,10 @@ img{
 .services{
     margin-top: 14rem;
     margin-bottom: 18rem;
+    @include mediaQuery.sm{
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
     .section_heading{
         font-size: 1.4rem;
         line-height: 2.4;
@@ -230,9 +259,16 @@ img{
 .features{
     margin-top: 18.1rem;
     margin-bottom: 20.2rem;
+    @include mediaQuery.sm{
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
     .container-left{
         @include flexDirection(row,space-between);
         gap: 9.7rem;
+        @include mediaQuery.xl{
+            @include flexDirection(column, center);
+        };
     }
     &__heading{
         margin-top: 3.8rem;
@@ -261,11 +297,19 @@ img{
             height: 45rem;
             object-fit: cover;
             width: 35rem;
+            @include mediaQuery.xl{
+                right: 0;
+                left: unset;
+                bottom: -5rem;
+            }
           }
         }
     
     &__text_container {
         width: 65%;
+        @include mediaQuery.xl{
+            width: 100%;
+        }
     }
     .advantage1,
     .advantage2{
@@ -289,6 +333,10 @@ img{
 .works{
     margin-top: 20rem;
     margin-bottom: 25rem;
+    @include mediaQuery.sm{
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
 
     .section_heading{
         font-size: 1.4rem;
@@ -343,6 +391,10 @@ img{
 .testimonials{
     margin-top: 25rem;
     margin-bottom: 17rem;
+    @include mediaQuery.sm{
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
 
     &__wrapper{
         display: grid;
@@ -355,6 +407,9 @@ img{
             line-height: 2.4rem;
             letter-spacing: 0.4rem;
             text-transform: uppercase;
+            @include mediaQuery.xl{
+                grid-column: 1 / span 2;
+            }
         }
     }
 
@@ -362,15 +417,25 @@ img{
         grid-column: 2;
         grid-row: 1 / span 2;
 
+        @include mediaQuery.xl{
+            grid-column:  1 / span 2;
+            grid-row: 2 / span 2;
+            height: 40vh;
+        }
+
         img{
             max-width: 100%;
+            object-fit: contain;
         }
     }
 
     &__text_wrapper{
         grid-column: 1;
 
-        @include flexDirection(column, space-between)
+        @include flexDirection(column, space-between);
+        @include mediaQuery.xl{
+            grid-column: 1 / span 2;
+        }
     }
     &__user_profile_description {
         margin-top: 12rem;
@@ -393,6 +458,10 @@ img{
     background-color: #fafafa;
     padding-top: 10rem;
     padding-bottom: 14rem;
+    @include mediaQuery.sm{
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
 
     &__text_wrapper{
         display: grid;
@@ -440,6 +509,14 @@ img{
                 opacity: 1;
                 transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
             }
+            @include mediaQuery.md{
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+
+        @include mediaQuery.sm{
+            overflow-x: scroll;
         }
     }
 

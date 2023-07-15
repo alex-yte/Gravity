@@ -820,13 +820,25 @@ body {
 .features__img_container img {
   width: 100%;
 }
+@media (max-width: 1200px) {
+  .features__img_container {
+    height: 40vh;
+  }
+}
 .features__img_container .back {
-  width: 100%;
+  width: 57rem;
+}
+@media (max-width: 1200px) {
+  .features__img_container .back {
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 .features__img_container .front {
   position: absolute;
-  left: 30%;
-  bottom: 0;
+  right: -30%;
+  bottom: -20%;
   height: 45rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -840,7 +852,7 @@ body {
   }
 }
 .features__text_container {
-  width: 65%;
+  width: 36%;
 }
 @media (max-width: 1200px) {
   .features__text_container {

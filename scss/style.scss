@@ -287,13 +287,20 @@ img{
             width: 100%;
         }
         position: relative;
+        @include mediaQuery.xl{
+            height: 40vh;
+        }
         .back{
-            width: 100%;
+            width: 57rem;
+            @include mediaQuery.xl{
+                height: 100%;
+                object-fit: contain;
+            }
         }
         .front{
             position: absolute;
-            left: 30%;
-            bottom: 0;
+            right: -30%;
+            bottom: -20%;
             height: 45rem;
             object-fit: cover;
             width: 35rem;
@@ -306,7 +313,7 @@ img{
         }
     
     &__text_container {
-        width: 65%;
+        width: 36%;
         @include mediaQuery.xl{
             width: 100%;
         }

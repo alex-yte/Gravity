@@ -29,9 +29,9 @@ img{
     @include mediaQuery.xl{
         width: 100%;
         height: 100%;
-    }
-    
+    }   
 }
+
 
 .header{
     margin-top: 6rem;
@@ -45,6 +45,10 @@ img{
 
 .hero{
     margin-top: 0;
+    @include mediaQuery.md{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
     .container-right{
         @include flexDirection(row, space-around);
         @include mediaQuery.lg{
@@ -102,6 +106,10 @@ img{
 .about{
     margin-top: 14rem;
     margin-bottom: 14rem;
+    @include mediaQuery.md{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
     @include mediaQuery.sm{
         margin-top: 10rem;
         margin-bottom: 10rem;
@@ -165,10 +173,11 @@ img{
 .services{
     margin-top: 14rem;
     margin-bottom: 18rem;
-    @include mediaQuery.sm{
-        margin-top: 10rem;
-        margin-bottom: 10rem;
+    @include mediaQuery.md{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
+    
     .section_heading{
         font-size: 1.4rem;
         line-height: 2.4;
@@ -259,9 +268,9 @@ img{
 .features{
     margin-top: 18.1rem;
     margin-bottom: 20.2rem;
-    @include mediaQuery.sm{
-        margin-top: 10rem;
-        margin-bottom: 10rem;
+    @include mediaQuery.md{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
     .container-left{
         @include flexDirection(row,space-between);
@@ -340,9 +349,9 @@ img{
 .works{
     margin-top: 20rem;
     margin-bottom: 25rem;
-    @include mediaQuery.sm{
-        margin-top: 10rem;
-        margin-bottom: 10rem;
+    @include mediaQuery.md{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
 
     .section_heading{
@@ -398,9 +407,9 @@ img{
 .testimonials{
     margin-top: 25rem;
     margin-bottom: 17rem;
-    @include mediaQuery.sm{
-        margin-top: 10rem;
-        margin-bottom: 10rem;
+    @include mediaQuery.md{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
 
     &__wrapper{
@@ -465,9 +474,9 @@ img{
     background-color: #fafafa;
     padding-top: 10rem;
     padding-bottom: 14rem;
-    @include mediaQuery.sm{
-        margin-top: 10rem;
-        margin-bottom: 10rem;
+    @include mediaQuery.md{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
 
     &__text_wrapper{
@@ -549,3 +558,4 @@ img{
         }
     }
 }
+

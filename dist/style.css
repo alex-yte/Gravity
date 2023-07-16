@@ -527,6 +527,12 @@ body {
 .hero {
   margin-top: 0;
 }
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}
 .hero .container-right {
   display: flex;
   flex-direction: row;
@@ -596,6 +602,12 @@ body {
 .about {
   margin-top: 14rem;
   margin-bottom: 14rem;
+}
+@media (max-width: 768px) {
+  .about {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
 }
 @media (max-width: 480px) {
   .about {
@@ -673,10 +685,10 @@ body {
   margin-top: 14rem;
   margin-bottom: 18rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .services {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 }
 .services .section_heading {
@@ -783,10 +795,10 @@ body {
   margin-top: 18.1rem;
   margin-bottom: 20.2rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .features {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 }
 .features .container-left {
@@ -881,10 +893,10 @@ body {
   margin-top: 20rem;
   margin-bottom: 25rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .works {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 }
 .works .section_heading {
@@ -944,10 +956,10 @@ body {
   margin-top: 25rem;
   margin-bottom: 17rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .testimonials {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 }
 .testimonials__wrapper {
@@ -1018,10 +1030,10 @@ body {
   padding-top: 10rem;
   padding-bottom: 14rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .clients {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 }
 .clients__text_wrapper {

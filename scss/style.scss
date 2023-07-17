@@ -299,10 +299,18 @@ img{
         @include mediaQuery.xl{
             height: 40vh;
         }
+        @include mediaQuery.md{
+            height: fit-content;
+        }
         .back{
             width: 57rem;
             @include mediaQuery.xl{
                 height: 100%;
+                object-fit: contain;
+            }
+            @include mediaQuery.sm{
+                width: 70%;
+                height: auto;
                 object-fit: contain;
             }
         }
@@ -317,6 +325,11 @@ img{
                 right: 0;
                 left: unset;
                 bottom: -5rem;
+            }
+            @include mediaQuery.sm{
+                width: 40%;
+                height: 100%;
+                object-fit: cover;
             }
           }
         }
@@ -364,16 +377,27 @@ img{
         @include flexDirection(row, space-between);
         margin-top: 4rem;
         margin-bottom: 10.8rem;
+        @include mediaQuery.sm{
+            @include flexDirection(column, flex-start);
+            gap: 2rem;
+        }
     }
     &__buttons_wrapper{
         @include flexDirection(row, space-between);
         gap: 2.4rem;
         align-items: center;
+        @include mediaQuery.sm{
+            flex-wrap: wrap;
+            justify-content: end;
+        }
         
         p{
             font-size: 1.4rem;
             line-height: 2.4rem;
             letter-spacing: 0.4rem;
+            @include mediaQuery.sm{
+                font-size: 2rem;
+            }
             &:hover{
                 opacity: 1;
                 cursor: pointer;
@@ -395,11 +419,18 @@ img{
         @include flexDirection(row,space-between);
         align-items: center;
         margin-top: 5.2rem;
+        @include mediaQuery.sm{
+            flex-direction: column;
+            gap: 2rem;
+        }
         p{
             font-size: 1.8rem;
             font-weight: 400;
             line-height: 2.8rem;
             width: 65%;
+            @include mediaQuery.sm{
+                width: 100%;
+            }
         }
     }
 }
@@ -415,6 +446,9 @@ img{
     &__wrapper{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        @include mediaQuery.md{
+            grid-row-gap: 2rem;
+        }
         
         .section_heading{
             grid-column: 1;
@@ -497,11 +531,18 @@ img{
             margin-bottom: 0;
             display: flex;
             align-items: center;
+            @include mediaQuery.sm{
+                grid-column: 1 / span 2;
+            }
         }
     }
     &__heading{
         grid-column: 1;
         grid-row: 1;
+        @include mediaQuery.sm{
+            grid-row: 2;
+            margin-top: 2rem;
+        }
     }
     &__description{
         grid-column: 2;
@@ -510,6 +551,11 @@ img{
         font-weight: 400;
         line-height: 28px; 
         opacity: .7;
+        @include mediaQuery.sm{
+            grid-column: 1 / span 2;
+            grid-row: 3;
+            margin-top: 2rem;
+        }
     }
     &__logo_wrapper{
         margin-top: 8rem;

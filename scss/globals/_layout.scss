@@ -16,10 +16,7 @@
         padding-inline: 8rem;
     }
     @include mediaQuery.sm{
-        padding-inline: 6rem;
-    }
-    @include mediaQuery.xs{
-        padding-inline: 2rem;
+        padding-inline: 0;
     }
 }
 .container-right{

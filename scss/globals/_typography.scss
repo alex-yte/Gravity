@@ -1,5 +1,9 @@
+ @use "../globals/mediaQ" as mediaQuery;
 :root{
     font-size: 62.5%;
+	@include mediaQuery.sm{
+		font-size: 45%;
+	}
 }
 
 @font-face {

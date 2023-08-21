@@ -318,6 +318,11 @@ template {
 :root {
   font-size: 62.5%;
 }
+@media (max-width: 1200px) {
+  :root {
+    font-size: 55%;
+  }
+}
 @media (max-width: 480px) {
   :root {
     font-size: 45%;
@@ -553,11 +558,9 @@ body {
   padding-bottom: 19.5rem;
   padding-top: 13rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .hero__text_container {
-    width: 85%;
-    padding-bottom: 10rem;
-    padding-top: 5rem;
+    width: 50%;
   }
 }
 @media (max-width: 768px) {
@@ -622,7 +625,7 @@ body {
   align-items: center;
   gap: 12.5rem;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .about .container-center {
     gap: 5rem;
     display: flex;
@@ -1042,7 +1045,7 @@ body {
   letter-spacing: 0.4rem;
   text-transform: uppercase;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .testimonials__wrapper .section_heading {
     grid-column: 1/span 2;
   }
@@ -1051,7 +1054,7 @@ body {
   grid-column: 2;
   grid-row: 1/span 2;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .testimonials__img_wrapper {
     grid-column: 1/span 2;
     grid-row: 2/span 2;
@@ -1069,7 +1072,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .testimonials__text_wrapper {
     grid-column: 1/span 2;
   }

@@ -389,7 +389,7 @@ a:active {
 }
 @media (max-width: 768px) {
   .container-center {
-    padding-inline: 8rem;
+    padding-inline: 1rem;
   }
 }
 @media (max-width: 480px) {
@@ -764,6 +764,11 @@ body {
 @media (max-width: 1200px) {
   .slider__img_wrapper {
     height: 40vh;
+    width: auto;
+  }
+  .slider__img_wrapper img {
+    width: auto;
+    height: auto;
   }
 }
 .slider__img_wrapper::-webkit-scrollbar {
@@ -978,6 +983,12 @@ body {
   position: relative;
   bottom: 2rem;
   box-shadow: -30px 80px 200px 0px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 1200px) {
+  .works__works_item img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .works__disclaimer_wrapper {
   display: flex;

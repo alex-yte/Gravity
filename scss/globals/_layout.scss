@@ -13,7 +13,7 @@
     }
 
     @include mediaQuery.md{
-        padding-inline: 8rem;
+        padding-inline: 1rem;
     }
     @include mediaQuery.sm{
         padding-inline: 0;

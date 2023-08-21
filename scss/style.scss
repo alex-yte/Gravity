@@ -236,6 +236,11 @@ img{
         gap: 3rem;
         @include mediaQuery.xl{
             height: 40vh;
+            width: auto;
+            img{
+                width: auto;
+                height: auto;
+            }
         }
     }
     &__img_wrapper::-webkit-scrollbar {
@@ -413,6 +418,14 @@ img{
             position: relative;
             bottom: 2rem;
             box-shadow: -30px 80px 200px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+    &__works_item{
+        img{
+            @include mediaQuery.xl{
+                width: 100%;
+                height: 100%;
+            }
         }
     }
     &__disclaimer_wrapper{

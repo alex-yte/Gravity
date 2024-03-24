@@ -29,6 +29,7 @@ img{
     @include mediaQuery.xl{
         width: 100%;
         height: 100%;
+        object-fit: contain;
     }   
 }
 
@@ -43,6 +44,18 @@ img{
     }
 }
 
+.menu{
+    &:hover{
+      svg{
+        rect{
+          fill: var(--blue);
+        }
+      }
+    }
+  }
+section{
+    overflow: hidden;
+}
 .hero{
     margin-top: 0;
     @include mediaQuery.md{
@@ -50,25 +63,59 @@ img{
         margin-bottom: 5rem;
     }
     .container-right{
-        @include flexDirection(row, space-around);
+        // @include flexDirection(row, space-around);
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        min-height: 600px;
+        position: relative;
+
         @include mediaQuery.lg{
-            gap: 2rem;
-            @include flexDirection(column-reverse, center );
+            gap: 1rem;
+            grid-template-columns: 1fr;
+            grid-template-rows: 40vh 40vh;
         }
     }
     &__text_container{
         @include flexDirection(column, space-between);
         padding-bottom: 19.5rem;
         padding-top: 13rem;
-        @include mediaQuery.xl{
-            width: 50%;
+        gap: 1.5rem;
+
+        @include mediaQuery.lg{
+            grid-row: 2
         }
+        
         @include mediaQuery.md{
             width: 90%;
             padding-bottom: 5rem;
             padding-top: 4rem;
         }
-        
+    }
+    &__img_container{
+        position: absolute;
+        right: 0;
+        height: 100%;
+        img{
+            height: 100%;
+        }
+        &[move-right]{
+            animation: move-right 2s forwards;
+        }
+        &[move-left]{
+            animation: move-left 2s forwards;
+        }
+
+        @include mediaQuery.xl{
+            width: 40%;
+        }
+        @include mediaQuery.lg{
+            grid-row: 1;
+            width: fit-content;
+            right: unset;
+            left: 0;
+        }
     }
     &__heading{
         font-family: font.$bold;
@@ -76,10 +123,20 @@ img{
         font-size: 6rem;
         line-height: 7rem;
         letter-spacing: -0.1rem;
+        display: none;
+        
+        &.active{
+            display: block;
+        }
     }
     &__description{
         font-size: 1.8rem;
         line-height: 2.8rem;
+        display: none;
+        
+        &.active{
+            display: block;
+        }
     }
     &__img_container{
         @include mediaQuery.lg{
@@ -91,13 +148,69 @@ img{
         gap: .5rem;
     }
     .loader{
-        height: 0.2rem;
-        width: 6.2em;
-        background: #C6B393;
-        opacity: .5;
+        position: relative;
+        cursor: pointer;
+        padding: 5px;
+        height: 2px;
+        width: 6.2rem;
+        
+        .progress{
+            height: 2px;
+            width: 6.2rem;
+            background: #efefef;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            height: 2px;
+            z-index: 5;
+
+            &-back{
+                position: absolute;
+                background: #efefef;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                height: 2px;
+                width: 100%;
+                z-index: 4;
+            }
+        }
+        
+        &.active{
+            width: 6.2rem;
+
+            .progress{
+                background: #C6B393;
+                animation: load 10s forwards linear;
+            }
+        }
+        
     }
-    .loader.active{
-        opacity: 1;
+}
+
+@keyframes load{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 6.2rem;
+    }
+}
+@keyframes move-right{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+@keyframes move-left{
+    0%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(0);
     }
 }
 

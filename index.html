@@ -6,6 +6,10 @@
     <title>Gravity</title>
 
     <link rel="stylesheet" href="./dist/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="main.js" defer></script>
 
 </head>
@@ -26,11 +30,11 @@
                     <path d="M61.9942 5.904L66.9142 17.52L66.4102 18.768C65.8822 20.04 65.5943 20.592 64.0823 20.592C63.5783 20.592 63.0742 20.472 62.6182 20.304L62.2582 22.896C62.9782 23.088 63.7222 23.184 64.4662 23.184C67.3462 23.184 68.1143 21.768 69.0502 19.392L74.3063 5.904H71.3063L68.4262 13.896H68.3783L65.1622 5.904H61.9942Z" fill="#222222"/>
                     </svg>
             </a>
-            <button class="search">
+            <!-- <button class="search">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8.5C0 3.80557 3.80557 0 8.5 0C13.1944 0 17 3.80557 17 8.5C17 10.3205 16.4277 12.0073 15.4532 13.3903L18.8922 16.827C19.2831 17.2176 19.2831 17.8511 18.8923 18.2417L18.2444 18.8891C17.854 19.2793 17.2212 19.2793 16.8307 18.8891L13.3915 15.4524C12.0083 16.4274 10.321 17 8.5 17C3.80557 17 0 13.1944 0 8.5ZM8.49996 14.5714C5.15218 14.5714 2.42854 11.8478 2.42854 8.5C2.42854 5.15221 5.15218 2.42857 8.49996 2.42857C11.8477 2.42857 14.5714 5.15221 14.5714 8.5C14.5714 11.8478 11.8477 14.5714 8.49996 14.5714Z" fill="#222222"/>
                     </svg>                    
-            </button>
+            </button> -->
             <button class="menu">
                 <svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="34" height="3" fill="#222222"/>
@@ -137,13 +141,36 @@
         </div>    
         <div class="services__slider_wrapper">
             <div class="sevices__slider1">
-                <div id="slider__img_wrapper" class="slider__img_wrapper">
+                <!-- <div id="slider__img_wrapper" class="slider__img_wrapper">
                     <img class="multimedia_img" src="./assets/img/Serices_Placeholder.jpg" alt="">
                     <img class="multimedia_img" src="./assets/img/Serices_Placeholder.jpg" alt="">
                     <img class="multimedia_img" src="./assets/img/Serices_Placeholder.jpg" alt="">
+                </div> -->
+
+                <!-- Slider main container -->
+                <div class="swiper slider__img_wrapper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <img class="swiper-slide multimedia_img" src="./assets/img/Serices_Placeholder.jpg" alt="">
+                        <img class="swiper-slide multimedia_img" src="./assets/img/Serices_Placeholder.jpg" alt="">
+                        <img class="swiper-slide multimedia_img" src="./assets/img/Serices_Placeholder.jpg" alt="">
+                        <img class="swiper-slide multimedia_img" src="./assets/img/Serices_Placeholder.jpg" alt="">
+                    </div>
+                <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
                 </div>
+
+
                 <div class="slider__btn_wrapper">
-                    <button class="prev">
+                    <button class="services_prev">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="Arrow left">
                             <rect id="mask" width="50" height="50" fill="#C4C4C4"/>
@@ -151,7 +178,7 @@
                             </g>
                         </svg>
                     </button>
-                    <button class="next">
+                    <button class="services_next">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="Arrow right">
                             <rect id="mask" width="50" height="50" fill="#C4C4C4"/>
@@ -276,49 +303,93 @@
 
 <section class="testimonials">
     <div class="container-center">
-        <div class="testimonials__wrapper">
-            <p class="paragraph section_heading">
-                — Testimonials
-            </p>
-
-            <div class="testimonials__text_wrapper">
-                <h2 class="testimonials__heading">
-                    "Professionals in their craft! All products were super great with strong attention to details, and overall vibe"
-                </h2>
-    
-                <div class="testimonials__user_profile_description">
-                    <h4 class="user_name">
-                        Polina Kuzina
-                    </h4>
-                    <p class="paragraph user_position">
-                        Manager at Craftwork
-                    </p>
+        <p class="paragraph section_heading">
+            — Testimonials
+        </p>
+        
+        
+        
+        
+        <div class="testimonials_slide swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+                <div class="swiper-slide testimonials__wrapper">
+                <div class="testimonials__text_wrapper">
+                    <h2 class="testimonials__heading">
+                        "Professionals in their craft! All products were super great with strong attention to details, and overall vibe"
+                    </h2>
+                    <div class="testimonials__user_profile_description">
+                        <h4 class="user_name">
+                            Polina Kuzina
+                        </h4>
+                        <p class="paragraph user_position">
+                            Manager at Craftwork
+                        </p>
+                    </div>
                 </div>
-    
-                <div class="slider__btn_wrapper">
-                    <button class="prev">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="Arrow left">
-                            <rect id="mask" width="50" height="50" fill="#C4C4C4"/>
-                            <path id="Vector" d="M27.5 17.5L20 25.3125L27.5 33.125" stroke="white" stroke-width="2"/>
-                            </g>
-                        </svg>
-                    </button>
-                    <button class="next">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="Arrow right">
-                            <rect id="mask" width="50" height="50" fill="#C4C4C4"/>
-                            <path id="Vector" d="M22.5 33.75L30 25.9375L22.5 18.125" stroke="white" stroke-width="2"/>
-                            </g>
-                        </svg>
-                    </button>
+                
+                <div class="testimonials__img_wrapper">
+                    <img src="assets/img/Testimonials_Lady.jpg" alt="" srcset="">
+                </div>
+                </div>
+                <div class="swiper-slide testimonials__wrapper">
+                <div class="testimonials__text_wrapper">
+                    <h2 class="testimonials__heading">
+                        "Professionals in their craft! All products were super great with strong attention to details, and overall vibe"
+                    </h2>
+                    <div class="testimonials__user_profile_description">
+                        <h4 class="user_name">
+                            Polina Kuzina
+                        </h4>
+                        <p class="paragraph user_position">
+                            Manager at Craftwork
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="testimonials__img_wrapper">
+                    <img src="assets/img/Testimonials_Lady.jpg" alt="" srcset="">
+                </div>
+                </div>
+                <div class="swiper-slide testimonials__wrapper">
+                <div class="testimonials__text_wrapper">
+                    <h2 class="testimonials__heading">
+                        "Professionals in their craft! All products were super great with strong attention to details, and overall vibe"
+                    </h2>
+                    <div class="testimonials__user_profile_description">
+                        <h4 class="user_name">
+                            Polina Kuzina
+                        </h4>
+                        <p class="paragraph user_position">
+                            Manager at Craftwork
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="testimonials__img_wrapper">
+                    <img src="assets/img/Testimonials_Lady.jpg" alt="" srcset="">
+                </div>
                 </div>
             </div>
-            
-
-            <div class="testimonials__img_wrapper">
-                <img src="assets/img/Testimonials_Lady.jpg" alt="" srcset="">
-            </div>
+          </div>
+        <div class="slider__btn_wrapper">
+            <button class="testimonial_prev">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Arrow left">
+                    <rect id="mask" width="50" height="50" fill="#C4C4C4"/>
+                    <path id="Vector" d="M27.5 17.5L20 25.3125L27.5 33.125" stroke="white" stroke-width="2"/>
+                    </g>
+                </svg>
+            </button>
+            <button class="testimonial_next">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Arrow right">
+                    <rect id="mask" width="50" height="50" fill="#C4C4C4"/>
+                    <path id="Vector" d="M22.5 33.75L30 25.9375L22.5 18.125" stroke="white" stroke-width="2"/>
+                    </g>
+                </svg>
+            </button>
         </div>
     </div>
 </section>

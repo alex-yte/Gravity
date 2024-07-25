@@ -1,14 +1,14 @@
-const container = document.getElementById("slider__img_wrapper");
-container.addEventListener("wheel", function (e) {
-  if (e.deltaY > 0) {
-    container.scrollLeft += 100;
-    e.preventDefault();
-  }
-  else {
-    container.scrollLeft -= 100;
-    e.preventDefault();
-  }
-});
+// const container = document.getElementById("slider__img_wrapper");
+// container.addEventListener("wheel", function (e) {
+//   if (e.deltaY > 0) {
+//     container.scrollLeft += 100;
+//     e.preventDefault();
+//   }
+//   else {
+//     container.scrollLeft -= 100;
+//     e.preventDefault();
+//   }
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
   let loaders = document.querySelectorAll('.loader');
@@ -82,4 +82,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
   });
+
+  const swiper = new Swiper('.slider__img_wrapper', {
+    // Optional parameters
+    loop: false,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 30,
+    rewind: true,
+    grabCursor: true,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: 'button.services_next',
+      prevEl: 'button.services_prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+
+  const testimonial_image = new Swiper('.testimonials_slide', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
+    navigation: {
+      nextEl: ".testimonial_next",
+      prevEl: ".testimonial_prev",
+    },
+  });
+
 });
